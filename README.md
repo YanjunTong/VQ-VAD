@@ -91,6 +91,31 @@ python main.py
 video_001 1 240 360 400 520 -1
 video_002 0 -1
 ```
+## 引用与致谢 (Citations & Acknowledgements)
+
+本项目在研发过程中，依赖并参考了以下优秀的开源模型与前沿研究。如果您在相关领域进行研究，请考虑引用以下工作：
+
+**1. CLIP (OpenAI)**
+```bibtex
+@inproceedings{radford2021learning,
+  title={Learning transferable visual models from natural language supervision},
+  author={Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and others},
+  booktitle={International conference on machine learning},
+  pages={8748--8763},
+  year={2021},
+  organization={PMLR}
+}
+```
+
+**2. Qwen2-VL (Alibaba Cloud)**
+```bibtex
+@article{wang2024qwen2,
+  title={Qwen2-vl: Enhancing vision-language model's perception of the world at any resolution},
+  author={Wang, Peng and Bai, Shuai and Tan, Sinan and Wang, Shijie and Fan, Zhihao and Bai, Jian and Chen, Keqin and Liu, Xuejing and Wang, Jialin and Ge, Wenbin and others},
+  journal={arXiv preprint arXiv:2409.12191},
+  year={2024}
+}
+```
 
 ## ⚠️ 注意事项
 * **显存占用**: 该流水线同时集成了 CLIP 特征提取器（默认 ViT-B/16）、自定义 VAD 模型和 Qwen2-VL-7B，运行过程中会进行动态显存清理（`torch.cuda.empty_cache()`），但仍建议在具有充足显存 (至少 16GB-24GB VRAM) 的 GPU 设备上运行。
